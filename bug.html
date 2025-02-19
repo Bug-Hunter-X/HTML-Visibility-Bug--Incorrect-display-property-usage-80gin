@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+  <button onclick="showHideDiv()">Show/Hide</button>
+
+  <script>
+    function showHideDiv() {
+      //Bug: Incorrectly using display property to toggle visibility
+      if (document.getElementById("myDiv").style.display === "none") {
+        document.getElementById("myDiv").style.display = "block";
+      } else {
+        document.getElementById("myDiv").style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
